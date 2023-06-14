@@ -7,13 +7,13 @@ public class Flag : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.TryGetComponent(out PlayerMovement player))
+        if(collision.TryGetComponent(out PlayerMovement player))//Если флаг задет, то получаем от игрока компонент передвижения
         {
-            player.enabled = false;
-            collision.attachedRigidbody.velocity = new Vector2(0, collision.attachedRigidbody.velocity.y);
+            player.enabled = false;//Выключаем передвижение игрока
+            collision.attachedRigidbody.velocity = new Vector2(0, collision.attachedRigidbody.velocity.y);//Останавливаем игрока
 
             _resultingPanel.gameObject.SetActive(true);
-            _resultingPanel.GetResults(true);
+            _resultingPanel.GetResults(true);//Уровень пройден
         }
     }
 }

@@ -48,7 +48,7 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
         //Прыжок
-        _onGround = Physics2D.OverlapCircle(_groundChecker.position, _groundCheckerRadius, _groundLayer);
+        _onGround = Physics2D.OverlapCircle(_groundChecker.position, _groundCheckerRadius, _groundLayer);//Проверяем, есть ли под ногами земля(создаём круг и проверяем, попадает ли в него платформа)
         if (_onGround && Input.GetKeyDown(KeyCode.Space))
             _rigidbody.AddForce(new Vector2(0, _jumpForce));
 

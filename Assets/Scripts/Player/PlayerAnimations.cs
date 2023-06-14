@@ -21,6 +21,7 @@ public class PlayerAnimations : MonoBehaviour
     }
 }
 
-/*В окне аниматора(windows -> animations -> animator) есть все анимации, переходы и значения,
+/*В окне аниматора(windows -> animations -> animator) 
+есть все анимации, переходы и значения,
 которые влияют на переход анимаций
  */
